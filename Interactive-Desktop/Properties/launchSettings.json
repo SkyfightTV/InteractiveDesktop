@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Interactive-Desktop (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Interactive-Desktop (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
