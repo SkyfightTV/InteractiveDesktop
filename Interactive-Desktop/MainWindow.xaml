@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     Title="Interactive-Desktop">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <GridView x:Name="ImageGridView"/>
+    </Grid>
 </Window>

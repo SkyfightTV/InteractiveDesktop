@@ -32,6 +32,7 @@ namespace Interactive_Desktop
         /// </summary>
         public App()
         {
+            Injecter.Injecter.Inject("", "");
             this.InitializeComponent();
         }
 
