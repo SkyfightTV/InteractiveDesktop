@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interactive_Desktop.Injecter
 {
@@ -36,7 +32,8 @@ namespace Interactive_Desktop.Injecter
         SizeBox = ThickFrame,
         TiledWindow = Overlapped,
 
-        OverlappedWindow = Overlapped | Caption | SystemMenu | ThickFrame | MinimizeBox | MaximizeBox,
+        OverlappedWindow =
+            Overlapped | Caption | SystemMenu | ThickFrame | MinimizeBox | MaximizeBox,
         ChildWindow = Child,
 
         ExtendedDlgModalFrame = 0x00000001,
@@ -64,7 +61,7 @@ namespace Interactive_Desktop.Injecter
         ExtendedNoinheritLayout = 0x00100000,
         ExtendedLayoutRTL = 0x00400000,
         ExtendedComposited = 0x02000000,
-        ExtendedNoActivate = 0x08000000
+        ExtendedNoActivate = 0x08000000,
     }
 
     [Flags]
@@ -84,6 +81,6 @@ namespace Interactive_Desktop.Injecter
         NoSendChanging = 0x0400,
         NoSize = 0x0001,
         NoZOrder = 0x0004,
-        ShowWindow = 0x0040
+        ShowWindow = 0x0040,
     }
 }
