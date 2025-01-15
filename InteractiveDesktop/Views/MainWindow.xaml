@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window
-    x:Class="Interactive_Desktop.MainWindow"
+    x:Class="Interactive_Desktop.Views.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:tb="using:H.NotifyIcon"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Interactive_Desktop"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:Interactive_Desktop.Views"
+    xmlns:tray="using:Interactive_Desktop.Views.Tray"
     mc:Ignorable="d"
     Title="InteractiveDesktop">
 
 
     <Grid Background="Green">
-
-        <tb:TaskbarIcon
-            ToolTipText="ToolTip"
-            ContextMenuMode="ActiveWindow"
-            MenuActivation="LeftOrRightClick"
-            PopupActivation="DoubleClick"
-        >
-        </tb:TaskbarIcon>
+        <views:Navigation></views:Navigation>
+        <tray:TrayIconView x:Name="TrayIconView" />
     </Grid>
 </Window>
