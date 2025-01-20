@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Microsoft.UI.Xaml;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -10,6 +12,9 @@ namespace Interactive_Desktop.Views;
 /// </summary>
 public sealed partial class MainWindow : Window
 {
+    public static List<Wallpaper.Wallpaper> Wallpapers = [];
+    public static IntPtr? SelectedMonitor = null;
+
     public MainWindow()
     {
         InitializeComponent();

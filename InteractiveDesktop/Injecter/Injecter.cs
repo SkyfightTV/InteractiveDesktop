@@ -18,7 +18,7 @@ namespace Interactive_Desktop.Injecter
             }
         }
 
-        public bool Attach()
+        public bool Attach(IntPtr monitor)
         {
             if (NativeFunctions.GetParent(_window) == _workerW)
             {
@@ -60,7 +60,7 @@ namespace Interactive_Desktop.Injecter
             }
 
             _previousParent = NativeFunctions.SetParent(_window, _workerW);
-            InjecterTools.SetMonitor(_workerW, _window, InjecterTools.GetMonitorFromPoint(_window));
+            InjecterTools.SetMonitor(_workerW, _window, monitor);
             NativeFunctions.ShowWindow(_window, 5);
             return true;
         }

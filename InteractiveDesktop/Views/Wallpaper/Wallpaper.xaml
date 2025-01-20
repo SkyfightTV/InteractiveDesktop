@@ -10,6 +10,8 @@
     Title="Wallpaper">
 
     <Grid>
-
+        <MediaPlayerElement Source="C:\Users\Admin\Nextcloud\Bureau\DemoVideo.mp4"
+                            AutoPlay="True" 
+                            ElementSoundMode="Off" />
     </Grid>
 </Window>

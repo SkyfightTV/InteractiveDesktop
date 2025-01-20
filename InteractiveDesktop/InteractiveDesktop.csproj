@@ -59,9 +59,6 @@
     <Page Update="Views\NavigationItems\Home\Buttons\Screens.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Views\NavigationItems\Home\NavigationTop.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Update="Views\NavigationItems\Settings.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

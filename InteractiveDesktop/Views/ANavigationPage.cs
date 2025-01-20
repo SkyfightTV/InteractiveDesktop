@@ -2,7 +2,7 @@
 
 namespace Interactive_Desktop.Views;
 
-public abstract class NavigationPage(NavigationViewItem navigationViewItem) : Page
+public abstract class ANavigationPage(NavigationViewItem navigationViewItem) : Page
 {
     public readonly NavigationViewItem NavigationViewItem = navigationViewItem;
 

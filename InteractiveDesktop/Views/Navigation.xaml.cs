@@ -9,7 +9,7 @@ namespace Interactive_Desktop.Views;
 
 public sealed partial class Navigation : Page
 {
-    private static HashSet<NavigationPage> NavigationPages { get; } = [new HomeWindow()];
+    private static HashSet<ANavigationPage> NavigationPages { get; } = [new HomeWindow()];
 
     public Navigation()
     {
