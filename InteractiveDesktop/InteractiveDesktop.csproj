@@ -17,6 +17,10 @@
     <Content Remove="Assets\Red.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Views\NavigationItems\Home\Buttons\Screens.xaml" />
+    <None Remove="Views\NavigationItems\Settings.xaml" />
+  </ItemGroup>
+  <ItemGroup>
     <Page Remove="TrayIconView.xaml" />
   </ItemGroup>
 
@@ -52,6 +56,18 @@
     <None Update="TrayIconView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
+    <Page Update="Views\NavigationItems\Home\Buttons\Screens.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\NavigationItems\Home\NavigationTop.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\NavigationItems\Settings.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Wallpaper\Wallpaper.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\Navigation\BlankPage1.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -63,7 +79,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\Wallpaper\" />
     <Folder Include="Views\Tray\" />
   </ItemGroup>
 

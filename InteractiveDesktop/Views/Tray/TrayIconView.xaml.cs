@@ -6,17 +6,14 @@ using Microsoft.UI.Xaml.Controls;
 namespace Interactive_Desktop.Views.Tray;
 
 [ObservableObject]
-#pragma warning disable MVVMTK0050
 public sealed partial class TrayIconView : UserControl
-#pragma warning restore MVVMTK0050
 {
     [ObservableProperty]
-#pragma warning disable MVVMTK0045
     private bool _isWindowVisible;
-#pragma warning restore MVVMTK0045
 
-    public TrayIconView()
+    public TrayIconView(bool isWindowVisible)
     {
+        _isWindowVisible = isWindowVisible;
         InitializeComponent();
     }
 

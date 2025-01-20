@@ -1,8 +1,10 @@
 ﻿using H.NotifyIcon;
 using Interactive_Desktop.Views;
+using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Windows.Globalization.DateTimeFormatting;
+using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -15,7 +17,6 @@ namespace Interactive_Desktop;
 public partial class App : Application
 {
     public static Window? MainWindow { get; private set; }
-    public static bool HandleClosedEvents { get; set; } = true;
 
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
@@ -35,13 +36,32 @@ public partial class App : Application
         MainWindow = new MainWindow();
         var appWindow = GetAppWindowForCurrentWindow(MainWindow);
         {
-            var presenter = appWindow.Presenter as OverlappedPresenter;
-            presenter!.IsAlwaysOnTop = true;
-
             appWindow.Closing += AppWindow_Closing;
+            SetCustomTitleBar(appWindow);
             MainWindow.Hide();
         }
         MainWindow.Activate();
+    }
+
+    private static void SetCustomTitleBar(AppWindow appWindow)
+    {
+        appWindow.Title = "Interactive Desktop";
+        appWindow.SetIcon("Inactive.ico");
+
+        var titleBar = appWindow.TitleBar;
+        var background = Color.FromArgb(100, 32, 32, 32);
+        titleBar.ForegroundColor = Colors.White;
+        titleBar.BackgroundColor = background;
+        titleBar.ButtonForegroundColor = Colors.White;
+        titleBar.ButtonBackgroundColor = background;
+        titleBar.ButtonHoverForegroundColor = Colors.White;
+        titleBar.ButtonHoverBackgroundColor = background;
+        titleBar.ButtonPressedForegroundColor = Colors.White;
+        titleBar.ButtonPressedBackgroundColor = background;
+        titleBar.InactiveForegroundColor = Colors.White;
+        titleBar.InactiveBackgroundColor = background;
+        titleBar.ButtonInactiveForegroundColor = Colors.White;
+        titleBar.ButtonInactiveBackgroundColor = background;
     }
 
     private static AppWindow GetAppWindowForCurrentWindow(Window window)
